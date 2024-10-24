@@ -1,0 +1,327 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Main container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading and introduction */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+.intro-text {
+    text-align: center;
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+/* Button styling */
+.btn {
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.btn-add {
+    background-color: #0c498f;
+    margin-bottom: 20px;
+}
+
+.btn-edit {
+    background-color: #28a745;
+    display: flex;
+    align-items: center;
+}
+
+.btn-edit:hover {
+    background-color: #218838;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+.btn span {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+/* Recipe grid layout */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Recipe card design */
+.recipe-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Recipe image styling */
+.recipe-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.recipe-content {
+    margin-bottom: 15px;
+}
+
+/* Text within card */
+.recipe-card h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.description, .ingredients, .instructions {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+strong {
+    color: #333;
+}
+
+/* Actions within card */
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .recipe-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
+
+/* Form container */
+.recipe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Form group styling */
+.recipe-form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.recipe-label {
+    font-size: 1rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.recipe-input,
+.recipe-textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: border 0.3s;
+}
+
+.recipe-input:focus,
+.recipe-textarea:focus {
+    border-color: #0c498f;
+    outline: none;
+}
+
+/* Textarea styling */
+.recipe-textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Button styling */
+.recipe-btn-submit {
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #0c498f;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.recipe-btn-submit:hover {
+    background-color: #07385f;
+}
+
+.recipe-btn-submit span {
+    font-size: 18px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .recipe-add-container {
+        padding: 15px;
+    }
+
+    .recipe-add-title {
+        font-size: 2rem;
+    }
+}
+
+/* Heading and introduction */
+.edit-recipe-title {
+    font-size: 2.5rem;
+    color: #343a40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.edit-recipe-description {
+    color: #6c757d;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+/* Form container */
+.edit-recipe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Form group styling */
+.edit-recipe-form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.edit-recipe-label {
+    font-size: 1rem;
+    color: #343a40;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.edit-recipe-input,
+.edit-recipe-textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    box-sizing: border-box;
+    transition: border 0.3s;
+}
+
+.edit-recipe-input:focus,
+.edit-recipe-textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Textarea styling */
+.edit-recipe-textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Button styling */
+.edit-recipe-btn-update {
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #047755;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.edit-recipe-btn-update:hover {
+    background-color: #10976f;
+}
+
+.edit-recipe-btn-update span {
+    font-size: 18px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .edit-recipe-container {
+        padding: 15px;
+    }
+
+    .edit-recipe-title {
+        font-size: 2rem;
+    }
+}
